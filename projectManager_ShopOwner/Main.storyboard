@@ -1858,6 +1858,7 @@
                         <viewLayoutGuide key="safeArea" id="Gqz-IJ-6BA"/>
                     </view>
                     <navigationItem key="navigationItem" title="客戶清單" id="i3e-cX-gmV">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="wyT-db-3mX"/>
                         <barButtonItem key="rightBarButtonItem" title="QRcode" id="fjw-sG-bwM">
                             <color key="tintColor" red="0.81568627449999997" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -1869,11 +1870,52 @@
                         <outlet property="QRcodeBtn" destination="fjw-sG-bwM" id="Sh7-8p-RbL"/>
                         <outlet property="segment" destination="D9x-da-A72" id="QcD-S8-Ih9"/>
                         <outlet property="tableView" destination="8TA-po-gjR" id="pqD-RH-bed"/>
+                        <segue destination="Yb4-cW-YUd" kind="push" id="eVc-cE-29e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGM-YU-UEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4677.6000000000004" y="1699.7001499250375"/>
+        </scene>
+        <!--張律師事務所-->
+        <scene sceneID="fK1-VO-lgU">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeVC" id="Yb4-cW-YUd" customClass="QRCodeVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GqZ-ar-Eyz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iqq-qn-Sl6">
+                                <rect key="frame" x="64" y="114" width="247.5" height="247.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbV-ro-nIf">
+                                <rect key="frame" x="92" y="406.5" width="191" height="41"/>
+                                <string key="text">請客戶開啟掃描功能進行
+商家QRCode掃描</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SbV-ro-nIf" firstAttribute="top" secondItem="iqq-qn-Sl6" secondAttribute="bottom" constant="45" id="7iI-zS-oku"/>
+                            <constraint firstItem="iqq-qn-Sl6" firstAttribute="centerX" secondItem="GqZ-ar-Eyz" secondAttribute="centerX" id="B9M-Dh-1uy"/>
+                            <constraint firstItem="iqq-qn-Sl6" firstAttribute="height" secondItem="GqZ-ar-Eyz" secondAttribute="width" multiplier="0.66" id="DMF-p0-SIQ"/>
+                            <constraint firstItem="iqq-qn-Sl6" firstAttribute="width" secondItem="GqZ-ar-Eyz" secondAttribute="width" multiplier="0.66" id="Old-oo-vcu"/>
+                            <constraint firstItem="SbV-ro-nIf" firstAttribute="centerX" secondItem="GqZ-ar-Eyz" secondAttribute="centerX" id="bEY-Ri-LPm"/>
+                            <constraint firstItem="iqq-qn-Sl6" firstAttribute="top" secondItem="UzC-gB-Q4J" secondAttribute="top" constant="50" id="kUt-Fu-CQv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UzC-gB-Q4J"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="張律師事務所" id="ESQ-QB-u3Q"/>
+                    <connections>
+                        <outlet property="imgView" destination="iqq-qn-Sl6" id="riX-Y6-9TY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPu-c7-gOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5452" y="1700"/>
         </scene>
     </scenes>
     <resources>

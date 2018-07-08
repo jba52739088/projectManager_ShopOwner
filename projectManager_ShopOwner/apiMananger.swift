@@ -219,35 +219,65 @@ extension UIViewController {
         }
     }
     
-    // 商家端：取得已加入商家
-    func getWatingMatchMemberRequest(_ completionHandler: @escaping ([eventModel]?) -> Void) {
-        var allEvents: [eventModel] = []
+    // 商家端：取得待審核商家
+    func getWatingMatchMemberRequest(_ completionHandler: @escaping ([MatchedMember]?) -> Void) {
+        var allmatchedMembers: [MatchedMember] = []
         guard let token = appDelegate.token else { return }
         let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/GetWatingMatchMember/"
         let headers = ["Authorization": "Bearer \(token)"]
         Alamofire.request(url, headers: headers).responseJSON { (response) -> Void in
             if let results = response.result.value as? [Dictionary<String,AnyObject>] {
                 for result in results {
-                    let aEvent = eventModel(CE_ID: result["CE_ID"] as? String ?? "",
-                                            M_ID: result["M_ID"] as? String ?? "",
-                                            P_ID: result["P_ID"] as? String ?? "",
-                                            OWNER_ID: result["OWNER_ID"] as? String ?? "",
-                                            GUEST: result["GUEST"] as? String ?? "",
-                                            P_NAME: result["P_NAME"] as? String ?? "",
-                                            P_CLASS: result["P_CLASS"] as? String ?? "",
-                                            C_DATE_START: result["C_DATE_START"] as? String ?? "",
-                                            C_DATE_END: result["C_DATE_END"] as? String ?? "",
-                                            MEETING_TYPE: result["MEETING_TYPE"] as? String ?? "",
-                                            MEETING_TITLE: result["MEETING_TITLE"] as? String ?? "",
-                                            MEETING_PLACE: result["MEETING_PLACE"] as? String ?? "",
-                                            MEETING_INFO: result["MEETING_INFO"] as? String ?? "",
-                                            STATUS: result["STATUS"] as? Int ?? 0,
-                                            SIDE: result["SIDE"] as? String ?? "")
-                    allEvents.append(aEvent)
+                    guard let R_ID = result["R_ID"] as? String,
+                        let MyName = result["MyName"] as? String,
+                        let M_ACCOUNT = result["M_ACCOUNT"] as? String,
+                        let M_SN = result["M_SN"] as? String,
+                        let M_NAME = result["M_NAME"] as? String,
+                        let Status = result["Status"] as? Int,
+                        let isHost = result["isHost"] as? Bool
+                        else { return }
+                    let aMatchedMember = MatchedMember(R_ID: R_ID, MyName: MyName, M_ACCOUNT: M_ACCOUNT, M_SN: M_SN, M_NAME: M_NAME, Status: Status, isHost: isHost)
+                    aMatchedMember.M_MAIL = result["M_MAIL"] as? String ?? ""
+                    aMatchedMember.M_TEL_D = result["M_TEL_D"] as? String ?? ""
+                    aMatchedMember.LastLogin = result["LastLogin"] as? String ?? ""
+                    allmatchedMembers.append(aMatchedMember)
                 }
-                completionHandler(allEvents)
+                completionHandler(allmatchedMembers)
             }else {
                 print("getWatingMatchMemberRequest: get JSON error")
+            }
+        }
+    }
+    
+    // 商家端：取得已審核商家
+    func getAuditedMatchMemberRequest(_ completionHandler: @escaping ([[String: String]]?) -> Void) {
+        var allmatchedMembers: [[String: String]] = []
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/GetAuditedMatchMember/"
+        let headers = ["Authorization": "Bearer \(token)"]
+        Alamofire.request(url, headers: headers).responseJSON { (response) -> Void in
+            if let results = response.result.value as? [Dictionary<String,AnyObject>] {
+                for result in results {
+                    let aMatchedMember = [result["M_NAME"] as? String ?? "": result["LastLogin"] as? String ?? ""]
+                    allmatchedMembers.append(aMatchedMember)
+                }
+                completionHandler(allmatchedMembers)
+            }else {
+                print("getAuditedMatchMemberRequest: get JSON error")
+            }
+        }
+    }
+    
+    // 商家端：取得QRCode
+    func getIDbyTokenRequest(_ completionHandler: @escaping (String?) -> Void) {
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/GetIDbyToken/"
+        let headers = ["Authorization": "Bearer \(token)"]
+        Alamofire.request(url, headers: headers).responseJSON { (response) -> Void in
+            if let results = response.result.value as? String {
+                completionHandler(results)
+            }else {
+                print("getIDbyTokenRequest: get JSON error")
             }
         }
     }

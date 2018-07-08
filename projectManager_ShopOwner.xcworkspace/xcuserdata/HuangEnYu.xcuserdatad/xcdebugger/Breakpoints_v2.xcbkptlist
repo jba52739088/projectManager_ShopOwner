@@ -24,13 +24,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "552731009.7762181"
+            timestampString = "552734953.394444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
-            landmarkName = "getWatingMatchMemberRequest(_:)"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "getAuditedMatchMemberRequest(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in (extension in projectManager_ShopOwner):__ObjC.UIViewController.getAuditedMatchMemberRequest((Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "projectManager_ShopOwner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/apiMananger.swift"
+                  timestampString = "552734090.425555"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "261"
+                  endingLineNumber = "261"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in (extension in projectManager_ShopOwner):__ObjC.UIViewController.getAuditedMatchMemberRequest((Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "projectManager_ShopOwner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/apiMananger.swift"
+                  timestampString = "552734090.428466"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "261"
+                  endingLineNumber = "261"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () throws -&gt; Swift.String in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in (extension in projectManager_ShopOwner):__ObjC.UIViewController.getAuditedMatchMemberRequest((Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "projectManager_ShopOwner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/apiMananger.swift"
+                  timestampString = "552734090.4311121"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "261"
+                  endingLineNumber = "261"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
