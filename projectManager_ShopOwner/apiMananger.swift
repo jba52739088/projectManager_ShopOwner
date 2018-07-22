@@ -24,12 +24,12 @@ extension UIViewController {
                     let token = JSON["token"] as? String{
                     if Result {
                         appDelegate.token = token
-                      completionHandler(true)
-//                        self.calendarRequest(from: "", end: "", { (_) in
-//                            print("123")
-//                        })
+                        completionHandler(true)
+                        //                        self.calendarRequest(from: "", end: "", { (_) in
+                        //                            print("123")
+                        //                        })
                     }else {
-                      completionHandler(false)
+                        completionHandler(false)
                     }
                 }
             }else {
@@ -45,7 +45,7 @@ extension UIViewController {
             .responseJSON { response in
                 if let JSON = response.result.value as? [String:AnyObject] {
                     if let result = JSON["result"] as? Bool,
-                       let msg = JSON["msg"] as? String{
+                        let msg = JSON["msg"] as? String{
                         if result {
                             completionHandler(true, "")
                         }else {
@@ -114,32 +114,55 @@ extension UIViewController {
         let parameters = ["m_name":key, "b_mid":b_mid, "start_date":from, "end_date":end] as [String : Any]
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
-            if let results = response.result.value as? [Dictionary<String,AnyObject>] {
-                for result in results {
-                    let aEvent = eventModel(CE_ID: result["CE_ID"] as? String ?? "",
-                                            M_ID: result["M_ID"] as? String ?? "",
-                                            P_ID: result["P_ID"] as? String ?? "",
-                                            OWNER_ID: result["OWNER_ID"] as? String ?? "",
-                                            GUEST: result["GUEST"] as? String ?? "",
-                                            P_NAME: result["P_NAME"] as? String ?? "",
-                                            P_CLASS: result["P_CLASS"] as? String ?? "",
-                                            C_DATE_START: result["C_DATE_START"] as? String ?? "",
-                                            C_DATE_END: result["C_DATE_END"] as? String ?? "",
-                                            MEETING_TYPE: result["MEETING_TYPE"] as? String ?? "",
-                                            MEETING_TITLE: result["MEETING_TITLE"] as? String ?? "",
-                                            MEETING_PLACE: result["MEETING_PLACE"] as? String ?? "",
-                                            MEETING_INFO: result["MEETING_INFO"] as? String ?? "",
-                                            STATUS: result["STATUS"] as? Int ?? 0,
-                                            SIDE: result["SIDE"] as? String ?? "")
-                    allEvents.append(aEvent)
+                if let results = response.result.value as? [Dictionary<String,AnyObject>] {
+                    for result in results {
+                        let aEvent = eventModel(CE_ID: result["CE_ID"] as? String ?? "",
+                                                M_ID: result["M_ID"] as? String ?? "",
+                                                P_ID: result["P_ID"] as? String ?? "",
+                                                OWNER_ID: result["OWNER_ID"] as? String ?? "",
+                                                GUEST: result["GUEST"] as? String ?? "",
+                                                P_NAME: result["P_NAME"] as? String ?? "",
+                                                P_CLASS: result["P_CLASS"] as? String ?? "",
+                                                C_DATE_START: result["C_DATE_START"] as? String ?? "",
+                                                C_DATE_END: result["C_DATE_END"] as? String ?? "",
+                                                MEETING_TYPE: result["MEETING_TYPE"] as? String ?? "",
+                                                MEETING_TITLE: result["MEETING_TITLE"] as? String ?? "",
+                                                MEETING_PLACE: result["MEETING_PLACE"] as? String ?? "",
+                                                MEETING_INFO: result["MEETING_INFO"] as? String ?? "",
+                                                STATUS: result["STATUS"] as? Int ?? 0,
+                                                SIDE: result["SIDE"] as? String ?? "")
+                        allEvents.append(aEvent)
+                    }
+                    completionHandler(allEvents)
+                }else {
+                    print("searchCalendarRequest: get JSON error")
                 }
-                completionHandler(allEvents)
-            }else {
-                print("searchCalendarRequest: get JSON error")
-            }
         }
     }
-
+    
+    // 刪除行事曆
+    func deleteCalendarRequest(ceid: String, _ completionHandler: @escaping (Bool, String) -> Void) {
+        var allEvents: [eventModel] = []
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/DeleteCalendar/"
+        let headers = ["Authorization": "Bearer \(token)"]
+        let parameters = ["ce_id":ceid] as [String : Any]
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            .responseJSON { response in
+                if let JSON = response.result.value as? [String:AnyObject] {
+                    if let result = JSON["result"] as? Bool,
+                        let msg = JSON["msg"] as? String{
+                        if result {
+                            completionHandler(true, "")
+                        }else {
+                            completionHandler(false, msg)
+                        }
+                    }
+                }else {
+                    print("deleteCalendarRequest: get JSON error")
+                }
+        }
+    }
     
     // 取得專案類別
     func projectClassRequest(_ completionHandler: @escaping ([Dictionary<String,String>]?) -> Void) {
@@ -151,8 +174,8 @@ extension UIViewController {
             if let results = response.result.value as? [Dictionary<String,String>] {
                 for result in results {
                     guard let PC_ID = result["PC_ID"] as? String,           //  ID
-                          let PC_NAME = result["PC_NAME"] as? String,       //  類別名稱
-                          let PC_UPD = result["PC_UPD"] as? String          //  類別更新時間
+                        let PC_NAME = result["PC_NAME"] as? String,       //  類別名稱
+                        let PC_UPD = result["PC_UPD"] as? String          //  類別更新時間
                         else { return }
                     var _class: Dictionary<String,String> = [:]
                     _class["PC_ID"] = PC_ID
@@ -166,7 +189,7 @@ extension UIViewController {
             }
         }
     }
-
+    
     // 取得邀請對象
     // 取得已加入商家
     func matchedMemberRequest(_ completionHandler: @escaping ([MatchedMember]?) -> Void) {
@@ -178,12 +201,12 @@ extension UIViewController {
             if let results = response.result.value as? [Dictionary<String,AnyObject>] {
                 for result in results {
                     guard let R_ID = result["R_ID"] as? String,
-                          let MyName = result["MyName"] as? String,
-                          let M_ACCOUNT = result["M_ACCOUNT"] as? String,
-                          let M_SN = result["M_SN"] as? String,
-                          let M_NAME = result["M_NAME"] as? String,
-                          let Status = result["Status"] as? Int,
-                          let isHost = result["isHost"] as? Bool
+                        let MyName = result["MyName"] as? String,
+                        let M_ACCOUNT = result["M_ACCOUNT"] as? String,
+                        let M_SN = result["M_SN"] as? String,
+                        let M_NAME = result["M_NAME"] as? String,
+                        let Status = result["Status"] as? Int,
+                        let isHost = result["isHost"] as? Bool
                         else { return }
                     let aMatchedMember = MatchedMember(R_ID: R_ID, MyName: MyName, M_ACCOUNT: M_ACCOUNT, M_SN: M_SN, M_NAME: M_NAME, Status: Status, isHost: isHost)
                     allmatchedMembers.append(aMatchedMember)
@@ -343,3 +366,5 @@ extension UIViewController {
         }
     }
 }
+
+
