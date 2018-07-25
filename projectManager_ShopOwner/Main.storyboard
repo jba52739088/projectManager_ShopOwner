@@ -912,6 +912,7 @@
                         <outlet property="tableView" destination="mMz-nl-6dQ" id="E1j-pu-w35"/>
                         <segue destination="sPa-3a-qSD" kind="push" id="M9Y-2s-GVR"/>
                         <segue destination="bbh-pD-1IY" kind="push" id="R9b-Om-IRX"/>
+                        <segue destination="TpF-VJ-KNm" kind="push" id="80V-Dm-VCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0l-ua-f71" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1847,13 +1848,13 @@
                                         <rect key="frame" x="0.0" y="125" width="355" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結束日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-3T-YEP">
-                                                <rect key="frame" x="0.0" y="6" width="69.5" height="52"/>
+                                                <rect key="frame" x="0.0" y="5.5" width="69.5" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年1月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-N9-but">
-                                                <rect key="frame" x="239.5" y="6" width="115.5" height="52"/>
+                                                <rect key="frame" x="239.5" y="5.5" width="115.5" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.81407335069999998" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2151,6 +2152,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPu-c7-gOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5452" y="1700"/>
+        </scene>
+        <!--商家行事曆-->
+        <scene sceneID="VIc-ju-pj0">
+            <objects>
+                <viewController storyboardIdentifier="shopCalendarVC" id="TpF-VJ-KNm" customClass="shopCalendarVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4S7-pb-7pI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yeW-K3-3zx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="sBh-lA-4aX">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sBh-lA-4aX" id="BYg-CZ-btA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TpF-VJ-KNm" id="tq0-7I-Fx3"/>
+                                    <outlet property="delegate" destination="TpF-VJ-KNm" id="BI6-da-N2h"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QOs-hU-y85" firstAttribute="bottom" secondItem="yeW-K3-3zx" secondAttribute="bottom" id="ArL-jM-23F"/>
+                            <constraint firstItem="yeW-K3-3zx" firstAttribute="top" secondItem="QOs-hU-y85" secondAttribute="top" id="RON-dk-WWk"/>
+                            <constraint firstItem="yeW-K3-3zx" firstAttribute="leading" secondItem="QOs-hU-y85" secondAttribute="leading" id="abo-8b-8k9"/>
+                            <constraint firstItem="QOs-hU-y85" firstAttribute="trailing" secondItem="yeW-K3-3zx" secondAttribute="trailing" id="gVN-2V-DHp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QOs-hU-y85"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="商家行事曆" id="SvT-LJ-u71"/>
+                    <connections>
+                        <outlet property="tableView" destination="yeW-K3-3zx" id="aCz-79-rTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwU-wx-oUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3929" y="-2051"/>
         </scene>
     </scenes>
     <resources>

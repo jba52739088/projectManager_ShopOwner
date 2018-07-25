@@ -50,4 +50,12 @@ extension shopCalendarVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.popToRootViewController(animated: true)
+        
+        self.calendarVC?.searchShopName = self.matchedMembers[indexPath.row]
+        self.calendarVC?.isSearchShop = true
+        self.calendarVC?.queryEvents()
+    }
 }
