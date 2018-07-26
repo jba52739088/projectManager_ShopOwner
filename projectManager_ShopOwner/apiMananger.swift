@@ -106,12 +106,12 @@ extension UIViewController {
     }
     
     // 搜尋行事曆
-    func searchCalendarRequest(key: String, b_mid: String, from: String, end: String, _ completionHandler: @escaping ([eventModel]?) -> Void) {
+    func searchCalendarRequest(m_name: String, b_mid: String, from: String, end: String, _ completionHandler: @escaping ([eventModel]?) -> Void) {
         var allEvents: [eventModel] = []
         guard let token = appDelegate.token else { return }
         let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/SearchCalendar/"
         let headers = ["Authorization": "Bearer \(token)"]
-        let parameters = ["m_name":key, "b_mid":b_mid, "start_date":from, "end_date":end] as [String : Any]
+        let parameters = ["m_name":m_name, "b_mid":b_mid, "start_date":from, "end_date":end] as [String : Any]
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
                 if let results = response.result.value as? [Dictionary<String,AnyObject>] {
@@ -218,6 +218,30 @@ extension UIViewController {
         }
     }
     
+    // 取得專案選項
+    func projectOptionRequest(pcid: String, _ completionHandler: @escaping ([Dictionary<String,String>]?) -> Void) {
+        var allClasses: [Dictionary<String,String>] = []
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/Project/GetProjectListbyClass/\(pcid)"
+        let headers = ["Authorization": "Bearer \(token)"]
+        Alamofire.request(url, headers: headers).responseJSON { (response) -> Void in
+            if let results = response.result.value as? [Dictionary<String,String>] {
+                for result in results {
+                    guard let P_ID = result["P_ID"] as? String,           //  ID
+                        let P_NAME = result["P_NAME"] as? String         //  類別名稱
+                        else { return }
+                    var _class: Dictionary<String,String> = [:]
+                    _class["P_ID"] = P_ID
+                    _class["P_NAME"] = P_NAME
+                    allClasses.append(_class)
+                }
+                completionHandler(allClasses)
+            }else {
+                print("projectClassRequest: get JSON error")
+            }
+        }
+    }
+    
     // 檢查是否衝突
     func checkScheduleRequest(m_id: String, startDate: String, startHour: String, startMinute: String, endDate: String, endHour: String, endMinute: String, _ completionHandler: @escaping (Bool, [Dictionary<String,String>]?) -> Void) {
         var allmatchedMembers: [MatchedMember] = []
@@ -303,6 +327,91 @@ extension UIViewController {
         }
     }
     
+    // 取得收件夾新邀請
+    func getInboxNewRequest(_ completionHandler: @escaping ([Dictionary<String,String>]?) -> Void) {
+        var allRequest: [Dictionary<String,String>] = []
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/GetInbox/false"
+        let headers = ["Authorization": "Bearer \(token)"]
+        Alamofire.request(url, headers: headers).responseJSON { (response) -> Void in
+            if let results = response.result.value as? [Dictionary<String,AnyObject>] {
+                for result in results {
+                    guard let P_CLASS = result["P_CLASS"] as? String,           //  ID
+                        let MEETING_TITLE = result["MEETING_TITLE"] as? String,           //  ID
+                        let GUEST = result["GUEST"] as? String,           //  ID
+                        let C_DATE_END = result["C_DATE_END"] as? String,           //  ID
+                        let CE_ID = result["CE_ID"] as? String         //  類別名稱
+                        else { return }
+                    var _class: Dictionary<String,String> = [:]
+                    _class["P_CLASS"] = P_CLASS
+                    _class["MEETING_TITLE"] = MEETING_TITLE
+                    _class["GUEST"] = GUEST
+                    _class["C_DATE_END"] = C_DATE_END
+                    _class["CE_ID"] = CE_ID
+                    allRequest.append(_class)
+                }
+                completionHandler(allRequest)
+            }else {
+                print("projectClassRequest: get JSON error")
+            }
+        }
+    }
+    
+    // 取得收件夾已回覆
+    func getInboxDoneRequest(_ completionHandler: @escaping ([Dictionary<String,String>]?) -> Void) {
+        var allRequest: [Dictionary<String,String>] = []
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/GetInbox/true"
+        let headers = ["Authorization": "Bearer \(token)"]
+        Alamofire.request(url, headers: headers).responseJSON { (response) -> Void in
+            if let results = response.result.value as? [Dictionary<String,AnyObject>] {
+                for result in results {
+                    guard let P_CLASS = result["P_CLASS"] as? String,           //  ID
+                        let MEETING_TITLE = result["MEETING_TITLE"] as? String,           //  ID
+                        let GUEST = result["GUEST"] as? String,           //  ID
+                        let C_DATE_END = result["C_DATE_END"] as? String,           //  ID
+                        let CE_ID = result["CE_ID"] as? String,       //  類別名稱
+                        let STATUS = result["STATUS"] as? Int         //  類別名稱
+                        else { return }
+                    var _class: Dictionary<String,String> = [:]
+                    _class["P_CLASS"] = P_CLASS
+                    _class["MEETING_TITLE"] = MEETING_TITLE
+                    _class["GUEST"] = GUEST
+                    _class["C_DATE_END"] = C_DATE_END
+                    _class["CE_ID"] = CE_ID
+                    _class["STATUS"] = "\(STATUS)"
+                    allRequest.append(_class)
+                }
+                completionHandler(allRequest)
+            }else {
+                print("projectClassRequest: get JSON error")
+            }
+        }
+    }
+    
+    // 回應邀請
+    func responseRequest(ce_id: String, isAccept: Bool, _ completionHandler: @escaping () -> Void){
+        guard let token = appDelegate.token else { return }
+        let headers = ["Authorization": "Bearer \(token)"]
+        let parameters = ["ce_id":ce_id, "isAccept":isAccept] as [String : Any]
+        
+        Alamofire.request("http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/UpdateCalendarAcceptStatus", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            .responseJSON { response in
+                if let JSON = response.result.value as? [String:AnyObject] {
+                    if let result = JSON["result"] as? Bool,
+                        let msg = JSON["msg"] as? String{
+                        if result {
+                            completionHandler()
+                        }else {
+                            completionHandler()
+                        }
+                    }
+                }else {
+                    print("registerRequest: get JSON error")
+                }
+        }
+    }
+    
     // 商家端：取得待審核商家
     func getWatingMatchMemberRequest(_ completionHandler: @escaping ([MatchedMember]?) -> Void) {
         var allmatchedMembers: [MatchedMember] = []
@@ -366,5 +475,4 @@ extension UIViewController {
         }
     }
 }
-
 

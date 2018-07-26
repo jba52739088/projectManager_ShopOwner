@@ -8,28 +8,36 @@
 
 import UIKit
 
-class tabBarController: UITabBarController {
-
+class tabBarController: UITabBarController{
+    
+    @IBOutlet weak var _tabBar: UITabBar!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        UITabBar.appearance().backgroundImage = UIImage(named: "p-05_下方功能列(底圖)")
+        self.tabBar.autoresizesSubviews = false
+        self.tabBar.clipsToBounds = true
+        self.tabBar.isTranslucent = false
+        
+        for item in self.tabBar.items!{
+            item.selectedImage = item.selectedImage?.withRenderingMode(.alwaysOriginal)
+            item.image = item.image?.withRenderingMode(.alwaysOriginal)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.tag == 1 {
+            appDelegate.calendarVC?.isSearch = false
+            appDelegate.calendarVC?.isSearchShop = false
+            appDelegate.calendarVC?.searchEnd = ""
+            appDelegate.calendarVC?.searchBegin = ""
+            appDelegate.calendarVC?.searchKey = ""
+            appDelegate.calendarVC?.searchShopName = nil
+            appDelegate.calendarVC?.setUpDate()
+        }
     }
-    */
-
 }
+
