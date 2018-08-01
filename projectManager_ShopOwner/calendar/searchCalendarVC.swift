@@ -24,6 +24,7 @@ class searchCalendarVC: UIViewController {
     var keyword: String?
     var searchBegin: String?
     var searchEnd: String?
+    var matchedMembers: [MatchedMember] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class searchCalendarVC: UIViewController {
         let tapGestureForSearchEnd = UITapGestureRecognizer(target: self, action: #selector(endTimePicker))
         self.beginView.addGestureRecognizer(tapGestureForSearchBegin)
         self.endView.addGestureRecognizer(tapGestureForSearchEnd)
+        self.getMatchedMembers()
         
         let date = Date()
         let lastMonth = Calendar.current.date(byAdding: .month, value: -1, to: date)
@@ -60,6 +62,13 @@ class searchCalendarVC: UIViewController {
             self.calendarVC?.searchEnd = self.searchEnd!
             self.calendarVC?.searchBegin = self.searchBegin!
             self.calendarVC?.searchKey = ""
+        }
+    }
+    
+    func getMatchedMembers() {
+        self.matchedMemberRequest { (_members) in
+            guard let members = _members else { return }
+            self.matchedMembers = members
         }
     }
     
@@ -105,5 +114,33 @@ class searchCalendarVC: UIViewController {
         }))
         editRadiusAlert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
         self.present(editRadiusAlert, animated: true)
+    }
+    
+    
+    @IBAction func selectCustom(_ sender: Any) {
+        showMembersSelectionSheet()
+    }
+    
+    func showMembersSelectionSheet() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        for member in self.matchedMembers {
+            alert.addAction(UIAlertAction(title: member.M_NAME, style: .default, handler: { (_) in
+                self.searchCustomLabel.text = member.M_NAME
+//                self.event.M_ID = member.M_SN
+//                self.event.GUEST = member.M_NAME
+//                UIView.performWithoutAnimation {
+//                    self.tableView.reloadData()
+//                }
+            }))
+        }
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (_) in
+            self.searchCustomLabel.text = "所有"
+//            self.event.M_ID = "-1"
+//            self.event.GUEST = ""
+//            UIView.performWithoutAnimation {
+//                self.tableView.reloadData()
+//            }
+        }))
+        self.presentAlert(alert, animated: true)
     }
 }

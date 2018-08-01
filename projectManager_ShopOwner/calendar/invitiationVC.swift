@@ -76,7 +76,7 @@ extension invitiationVC: UITableViewDelegate, UITableViewDataSource {
             cell.title.text = self.customsList[indexPath.row]["P_CLASS"]
             cell.secondTitle.text = self.customsList[indexPath.row]["MEETING_TITLE"]
             cell.name.text = self.customsList[indexPath.row]["GUEST"]
-            cell.time.text = self.customsList[indexPath.row]["C_DATE_END"]
+            cell.time.text = self.customsList[indexPath.row]["C_DATE_START"]
             cell.ce_id = self.customsList[indexPath.row]["CE_ID"]!
             cell.acceptBtn.isUserInteractionEnabled = true
             cell.rejectBtn.isUserInteractionEnabled = true
@@ -86,7 +86,7 @@ extension invitiationVC: UITableViewDelegate, UITableViewDataSource {
             cell.title.text = self.didConfirmList[indexPath.row]["P_CLASS"]
             cell.secondTitle.text = self.didConfirmList[indexPath.row]["MEETING_TITLE"]
             cell.name.text = self.didConfirmList[indexPath.row]["GUEST"]
-            cell.time.text = self.didConfirmList[indexPath.row]["C_DATE_END"]
+            cell.time.text = self.didConfirmList[indexPath.row]["C_DATE_START"]
             cell.acceptBtn.isUserInteractionEnabled = false
             cell.rejectBtn.isUserInteractionEnabled = false
             if (self.didConfirmList[indexPath.row]["STATUS"]!) == "1" {

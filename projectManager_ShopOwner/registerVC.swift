@@ -49,10 +49,15 @@ class registerVC: UIViewController {
             if isSucceed {
                 print("succeed")
 //                let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! loginVC
-                self.navigationController?.popViewController(animated: true)
+                let alert = UIAlertController(title: "註冊成功", message: nil, preferredStyle: .alert)
+                let okBtn = UIAlertAction(title: "確認", style: .default, handler: { (_) in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                alert.addAction(okBtn)
+                self.presentAlert(alert, animated: true)
             }else {
                 print(message)
-                self.showAlert(title: message, message: nil)
+                self.showAlert(title: "帳號、密碼、姓名為必填欄位，請填寫完整。", message: nil)
             }
         }
     }

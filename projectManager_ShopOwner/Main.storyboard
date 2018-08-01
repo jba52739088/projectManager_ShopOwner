@@ -339,7 +339,6 @@
         <!--張律師事務所-->
         <scene sceneID="fK1-VO-lgU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zPu-c7-gOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QRCodeVC" id="Yb4-cW-YUd" customClass="QRCodeVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GqZ-ar-Eyz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
@@ -373,13 +372,14 @@
                         <outlet property="imgView" destination="iqq-qn-Sl6" id="riX-Y6-9TY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPu-c7-gOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5452" y="1700"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="kim-Te-5ST">
             <objects>
-                <viewController storyboardIdentifier="loginVC" id="gtU-ht-sQS" customClass="loginVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="gtU-ht-sQS" customClass="loginVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svV-uE-5bh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -482,7 +482,7 @@
         <!--註冊-->
         <scene sceneID="wzw-Zd-Era">
             <objects>
-                <viewController id="DNF-8L-FjU" customClass="registerVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DNF-8L-FjU" customClass="registerVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GbZ-iT-p8S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -593,7 +593,7 @@
         <!--我的專案-->
         <scene sceneID="KBf-LC-o5i">
             <objects>
-                <viewController id="Cyr-Ht-v48" customClass="projectVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Cyr-Ht-v48" customClass="projectVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xft-b9-Bkl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -614,7 +614,7 @@
                                 <rect key="frame" x="5" y="90" width="365" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="aVX-fA-ptA" customClass="projectCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="aVX-fA-ptA" customClass="projectCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="365" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aVX-fA-ptA" id="RSG-eh-4Us">
@@ -702,7 +702,7 @@
         <!--費用管理-->
         <scene sceneID="mtk-qS-yhr">
             <objects>
-                <viewController id="WVq-hL-kJI" customClass="feeVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WVq-hL-kJI" customClass="feeVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OiJ-fT-UWZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -723,7 +723,7 @@
                                 <rect key="frame" x="5" y="100" width="365" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="60" id="Pal-zu-0ph" customClass="feeCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="60" id="Pal-zu-0ph" customClass="feeCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="365" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pal-zu-0ph" id="2cR-yQ-oBD">
@@ -835,7 +835,7 @@
         <!--其他功能-->
         <scene sceneID="iOK-rf-bmC">
             <objects>
-                <viewController id="n6F-OD-sof" customClass="otherVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="n6F-OD-sof" customClass="otherVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ia3-8A-qpF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -980,7 +980,7 @@
         <!--訊息中心-->
         <scene sceneID="LAp-Jm-IKi">
             <objects>
-                <viewController id="UWW-EI-BxQ" customClass="messageVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UWW-EI-BxQ" customClass="messageVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4sU-i0-1Ut">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1001,7 +1001,7 @@
                                 <rect key="frame" x="5" y="100" width="365" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="60" id="k6l-8f-TrT" customClass="msgCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="60" id="k6l-8f-TrT" customClass="msgCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="365" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k6l-8f-TrT" id="0Sr-d0-3iB">
@@ -1072,7 +1072,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="60" id="8Bn-dP-fPp" customClass="newsCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="60" id="8Bn-dP-fPp" customClass="newsCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="365" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Bn-dP-fPp" id="RcV-zF-6ZJ">
@@ -1155,7 +1155,7 @@
         <!--行程詳細資訊-->
         <scene sceneID="LBd-9d-dZK">
             <objects>
-                <viewController storyboardIdentifier="scheduleDetailVC" id="ADa-AO-uRP" customClass="scheduleDetailVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="scheduleDetailVC" id="ADa-AO-uRP" customClass="scheduleDetailVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZ7-pW-lZt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1164,7 +1164,7 @@
                                 <rect key="frame" x="20" y="74" width="335" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleTitleCell" rowHeight="60" id="5U7-Uq-7Me" customClass="scheduleTitleCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleTitleCell" rowHeight="60" id="5U7-Uq-7Me" customClass="scheduleTitleCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5U7-Uq-7Me" id="Jds-z1-XIW">
@@ -1189,7 +1189,7 @@
                                             <outlet property="titleLabel" destination="Lcb-Xb-lLJ" id="1Te-Ve-rwU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scheduleLocationCell" rowHeight="30" id="eMB-k3-ob5" customClass="scheduleLocationCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scheduleLocationCell" rowHeight="30" id="eMB-k3-ob5" customClass="scheduleLocationCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="335" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eMB-k3-ob5" id="gC5-OH-gea">
@@ -1214,7 +1214,7 @@
                                             <outlet property="locationLabel" destination="aTA-eS-9zI" id="UVx-eI-86h"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scheduleType_1Cell" id="3Ka-Tg-bVa" customClass="scheduleType_1Cell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scheduleType_1Cell" id="3Ka-Tg-bVa" customClass="scheduleType_1Cell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="118" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Ka-Tg-bVa" id="OrG-r2-j3Y">
@@ -1249,7 +1249,7 @@
                                             <outlet property="titleLabel" destination="R76-28-30i" id="CF6-c4-DJu"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleType_2Cell" id="W1o-Uw-VcS" customClass="scheduleType_2Cell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleType_2Cell" id="W1o-Uw-VcS" customClass="scheduleType_2Cell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="162" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W1o-Uw-VcS" id="R04-iL-Tqy">
@@ -1357,7 +1357,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="hwv-zP-npk">
             <objects>
-                <tabBarController storyboardIdentifier="tabbarController" automaticallyAdjustsScrollViewInsets="NO" id="iyZ-rP-qN9" customClass="tabBarController" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarController" automaticallyAdjustsScrollViewInsets="NO" id="iyZ-rP-qN9" customClass="tabBarController" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="sGQ-Z0-Ozt"/>
                     <tabBar key="tabBar" autoresizesSubviews="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="C7D-O6-Tf2">
@@ -1480,7 +1480,7 @@
         <!--修改行事曆-->
         <scene sceneID="mhn-HO-nbJ">
             <objects>
-                <viewController storyboardIdentifier="scheduleEditVC" id="w1G-P8-59r" customClass="scheduleEditVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="scheduleEditVC" id="w1G-P8-59r" customClass="scheduleEditVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fAp-QM-wAP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1491,33 +1491,45 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmd-ZP-gdi">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleEditCell" rowHeight="60" id="r3u-Zf-Ms4" customClass="scheduleEditlCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleEditCell" rowHeight="60" id="v71-mf-fdw" customClass="scheduleEditlCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r3u-Zf-Ms4" id="Cn3-IC-IfZ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v71-mf-fdw" id="QFg-RZ-z78">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="標題" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-p0-1yv">
-                                                    <rect key="frame" x="35" y="11" width="325" height="38"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開始" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJr-6k-ABd">
+                                                    <rect key="frame" x="20" y="0.0" width="67.5" height="59.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="標題" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBi-At-YaA">
+                                                    <rect key="frame" x="97" y="11" width="262.5" height="38"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rvG-p0-1yv" firstAttribute="top" secondItem="Cn3-IC-IfZ" secondAttribute="topMargin" id="EcO-PQ-KeM"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="rvG-p0-1yv" secondAttribute="trailing" id="Gnp-SU-0xG"/>
-                                                <constraint firstItem="rvG-p0-1yv" firstAttribute="leading" secondItem="Cn3-IC-IfZ" secondAttribute="leadingMargin" constant="20" id="Pb1-oQ-271"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="rvG-p0-1yv" secondAttribute="bottom" id="TKt-fl-PPK"/>
+                                                <constraint firstItem="hBi-At-YaA" firstAttribute="leading" secondItem="WJr-6k-ABd" secondAttribute="trailing" constant="10" id="5vc-fu-ePi"/>
+                                                <constraint firstAttribute="bottom" secondItem="WJr-6k-ABd" secondAttribute="bottom" id="I5k-fj-Bzp"/>
+                                                <constraint firstItem="WJr-6k-ABd" firstAttribute="leading" secondItem="QFg-RZ-z78" secondAttribute="leading" constant="20" id="MXN-pK-Mna"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hBi-At-YaA" secondAttribute="trailing" id="U34-6a-2Mf"/>
+                                                <constraint firstItem="hBi-At-YaA" firstAttribute="top" secondItem="QFg-RZ-z78" secondAttribute="topMargin" id="Z7H-40-p1D"/>
+                                                <constraint firstItem="WJr-6k-ABd" firstAttribute="top" secondItem="QFg-RZ-z78" secondAttribute="top" id="eEL-2i-7w8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hBi-At-YaA" secondAttribute="bottom" id="lN1-67-h7u"/>
+                                                <constraint firstItem="hBi-At-YaA" firstAttribute="width" secondItem="QFg-RZ-z78" secondAttribute="width" multiplier="0.7" id="q9x-9p-Ghj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="textField" destination="rvG-p0-1yv" id="UaU-Od-ClS"/>
+                                            <outlet property="label" destination="WJr-6k-ABd" id="ZgD-CG-Yif"/>
+                                            <outlet property="textField" destination="hBi-At-YaA" id="qPK-dk-gGR"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scheduleType_1Cell" id="nzF-aY-TF1" customClass="scheduleType_1Cell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scheduleType_1Cell" id="nzF-aY-TF1" customClass="scheduleType_1Cell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nzF-aY-TF1" id="cyL-cz-5xp">
@@ -1552,7 +1564,7 @@
                                             <outlet property="titleLabel" destination="IVf-nu-Dv2" id="wrw-bI-mHA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleType_2Cell" id="1zJ-Mv-EIx" customClass="scheduleType_2Cell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleType_2Cell" id="1zJ-Mv-EIx" customClass="scheduleType_2Cell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1zJ-Mv-EIx" id="hXp-L1-zu3">
@@ -1632,7 +1644,7 @@
         <!--1月-->
         <scene sceneID="mr7-Ug-isl">
             <objects>
-                <viewController id="9ZA-9d-bFp" customClass="calendarVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9ZA-9d-bFp" customClass="calendarVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yse-1e-m0J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1644,7 +1656,7 @@
                                 <rect key="frame" x="5" y="455" width="365" height="163"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="40" id="mnV-EW-SHd" customClass="calendarCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="40" id="mnV-EW-SHd" customClass="calendarCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="365" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mnV-EW-SHd" id="LkT-Ow-Ag5">
@@ -1818,7 +1830,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="SJY-ou-o1g" customClass="calendarCollectionCell" customModule="projectManager" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="SJY-ou-o1g" customClass="calendarCollectionCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="98" height="177"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1943,10 +1955,10 @@
             </objects>
             <point key="canvasLocation" x="3928.8000000000002" y="-1364.1679160419792"/>
         </scene>
-        <!--商家行事曆-->
+        <!--客戶行事曆-->
         <scene sceneID="kyL-Jf-HMK">
             <objects>
-                <viewController storyboardIdentifier="shopCalendarVC" id="vfp-xn-2AQ" customClass="shopCalendarVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shopCalendarVC" id="vfp-xn-2AQ" customClass="shopCalendarVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TcF-nq-7z5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1979,7 +1991,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wkb-2a-j9V"/>
                     </view>
-                    <navigationItem key="navigationItem" title="商家行事曆" id="XST-cL-xoK"/>
+                    <navigationItem key="navigationItem" title="客戶行事曆" id="XST-cL-xoK"/>
                     <connections>
                         <outlet property="tableView" destination="Uqf-66-YCv" id="PXx-im-qQR"/>
                     </connections>
@@ -1991,7 +2003,7 @@
         <!--Schedule ConflictVC-->
         <scene sceneID="FH7-3r-rTI">
             <objects>
-                <viewController storyboardIdentifier="scheduleConflictVC" id="Z6t-Xv-4Dl" customClass="scheduleConflictVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="scheduleConflictVC" id="Z6t-Xv-4Dl" customClass="scheduleConflictVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2fk-Cn-fgh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2075,7 +2087,7 @@
         <!--新增行程-->
         <scene sceneID="HfI-4l-lSm">
             <objects>
-                <viewController storyboardIdentifier="scheduleAddVC" id="bEg-hh-OSI" customClass="scheduleAddVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="scheduleAddVC" id="bEg-hh-OSI" customClass="scheduleAddVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S63-Ib-SlC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2088,7 +2100,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleEditCell" rowHeight="60" id="jDl-dB-msa" customClass="scheduleEditlCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleEditCell" rowHeight="60" id="jDl-dB-msa" customClass="scheduleEditlCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jDl-dB-msa" id="8Rd-SV-tFl">
@@ -2124,7 +2136,7 @@
                                             <outlet property="textField" destination="W0q-Zx-GSM" id="iLV-NU-bSf"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scheduleType_1Cell" id="gRa-iL-j8e" customClass="scheduleType_1Cell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scheduleType_1Cell" id="gRa-iL-j8e" customClass="scheduleType_1Cell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gRa-iL-j8e" id="Q61-4H-AsP">
@@ -2159,7 +2171,7 @@
                                             <outlet property="titleLabel" destination="7ZM-MQ-jG9" id="Zij-N4-gTN"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleType_2Cell" id="AhQ-zJ-ukA" customClass="scheduleType_2Cell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleType_2Cell" id="AhQ-zJ-ukA" customClass="scheduleType_2Cell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AhQ-zJ-ukA" id="bK6-M9-nLA">
@@ -2239,7 +2251,7 @@
         <!--搜尋行事曆-->
         <scene sceneID="D8D-mw-hTg">
             <objects>
-                <viewController storyboardIdentifier="searchCalendarVC" id="4ep-oz-gjI" customClass="searchCalendarVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchCalendarVC" id="4ep-oz-gjI" customClass="searchCalendarVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xfp-BX-TBc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2296,13 +2308,13 @@
                                         <rect key="frame" x="0.0" y="125" width="355" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結束日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7n-O6-9Ac">
-                                                <rect key="frame" x="0.0" y="6" width="69.5" height="52"/>
+                                                <rect key="frame" x="0.0" y="5.5" width="69.5" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年1月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-Ra-jlj">
-                                                <rect key="frame" x="239.5" y="6" width="115.5" height="52"/>
+                                                <rect key="frame" x="239.5" y="5.5" width="115.5" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.81407335069999998" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2322,7 +2334,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xp-ro-bMX">
                                         <rect key="frame" x="0.0" y="187" width="355" height="62.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜詢商家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQi-gA-aZV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜尋客戶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQi-gA-aZV">
                                                 <rect key="frame" x="0.0" y="5" width="69.5" height="52.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -2335,6 +2347,7 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="zqd-b4-uaw" firstAttribute="top" secondItem="7xp-ro-bMX" secondAttribute="top" constant="5" id="OcZ-bu-F8k"/>
                                             <constraint firstAttribute="trailing" secondItem="zqd-b4-uaw" secondAttribute="trailing" id="bgB-62-hFg"/>
@@ -2344,6 +2357,9 @@
                                             <constraint firstItem="zqd-b4-uaw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qQi-gA-aZV" secondAttribute="trailing" constant="10" id="wHW-Xc-IpX"/>
                                             <constraint firstItem="qQi-gA-aZV" firstAttribute="leading" secondItem="7xp-ro-bMX" secondAttribute="leading" id="zZs-6a-wsl"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="7DE-Ie-fMJ" appends="YES" id="HWy-5K-QZh"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -2382,13 +2398,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xl-4c-Pf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7DE-Ie-fMJ">
+                    <connections>
+                        <action selector="selectCustom:" destination="4ep-oz-gjI" id="3qc-P5-GVs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5425" y="-1364"/>
         </scene>
         <!--InvitiationVC-->
         <scene sceneID="qax-kB-9wd">
             <objects>
-                <viewController storyboardIdentifier="invitiationVC" id="Rh7-ir-yqf" customClass="invitiationVC" customModule="projectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="invitiationVC" id="Rh7-ir-yqf" customClass="invitiationVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gMY-dr-vGs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2409,7 +2430,7 @@
                                 <rect key="frame" x="5" y="100" width="365" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="Xzr-bv-12K" customClass="invitiationCell" customModule="projectManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="Xzr-bv-12K" customClass="invitiationCell" customModule="projectManager_ShopOwner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="365" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xzr-bv-12K" id="piu-rn-WNo">

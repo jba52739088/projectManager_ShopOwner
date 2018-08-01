@@ -284,9 +284,38 @@ extension UIViewController {
         let end_minute = event.endTime.components(separatedBy: ":")[1]
         let C_DATE_START = event.C_DATE_START.components(separatedBy: "T")[0]
         let C_DATE_END = event.C_DATE_END.components(separatedBy: "T")[0]
-        let parameters = ["m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":start_hour, "start_minute":start_minute, "C_DATE_END":C_DATE_END, "end_hour":end_hour, "end_minute":end_minute, "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE] as [String : Any]
+        let parameters = ["m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":start_hour, "start_minute":start_minute, "C_DATE_END":C_DATE_END, "end_hour":end_hour, "end_minute":end_minute, "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE, "meeting_info":event.MEETING_INFO] as [String : Any]
         
         Alamofire.request("http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/InsertCalendar", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            .responseJSON { response in
+                if let JSON = response.result.value as? [String:AnyObject] {
+                    if let result = JSON["result"] as? Bool,
+                        let msg = JSON["msg"] as? String{
+                        if result {
+                            completionHandler(true, "")
+                        }else {
+                            completionHandler(false, msg)
+                        }
+                    }
+                }else {
+                    print("registerRequest: get JSON error")
+                }
+        }
+    }
+    
+    // 修改行程
+    func modifyCalendarRequest(event: eventModel, _ completionHandler: @escaping (Bool, String) -> Void){
+        guard let token = appDelegate.token else { return }
+        let headers = ["Authorization": "Bearer \(token)"]
+        let start_hour = event.startTime.components(separatedBy: ":")[0]
+        let start_minute = event.startTime.components(separatedBy: ":")[1]
+        let end_hour = event.endTime.components(separatedBy: ":")[0]
+        let end_minute = event.endTime.components(separatedBy: ":")[1]
+        let C_DATE_START = event.C_DATE_START.components(separatedBy: "T")[0]
+        let C_DATE_END = event.C_DATE_END.components(separatedBy: "T")[0]
+        let parameters = ["m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":start_hour, "start_minute":start_minute, "C_DATE_END":C_DATE_END, "end_hour":end_hour, "end_minute":end_minute, "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE] as [String : Any]
+        
+        Alamofire.request("http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/UpdateCalendar/", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
                 if let JSON = response.result.value as? [String:AnyObject] {
                     if let result = JSON["result"] as? Bool,
@@ -339,14 +368,14 @@ extension UIViewController {
                     guard let P_CLASS = result["P_CLASS"] as? String,           //  ID
                         let MEETING_TITLE = result["MEETING_TITLE"] as? String,           //  ID
                         let GUEST = result["GUEST"] as? String,           //  ID
-                        let C_DATE_END = result["C_DATE_END"] as? String,           //  ID
+                        let C_DATE_END = result["C_DATE_START"] as? String,           //  ID
                         let CE_ID = result["CE_ID"] as? String         //  類別名稱
                         else { return }
                     var _class: Dictionary<String,String> = [:]
                     _class["P_CLASS"] = P_CLASS
                     _class["MEETING_TITLE"] = MEETING_TITLE
                     _class["GUEST"] = GUEST
-                    _class["C_DATE_END"] = C_DATE_END
+                    _class["C_DATE_START"] = C_DATE_END
                     _class["CE_ID"] = CE_ID
                     allRequest.append(_class)
                 }
@@ -369,7 +398,7 @@ extension UIViewController {
                     guard let P_CLASS = result["P_CLASS"] as? String,           //  ID
                         let MEETING_TITLE = result["MEETING_TITLE"] as? String,           //  ID
                         let GUEST = result["GUEST"] as? String,           //  ID
-                        let C_DATE_END = result["C_DATE_END"] as? String,           //  ID
+                        let C_DATE_START = result["C_DATE_START"] as? String,           //  ID
                         let CE_ID = result["CE_ID"] as? String,       //  類別名稱
                         let STATUS = result["STATUS"] as? Int         //  類別名稱
                         else { return }
@@ -377,7 +406,7 @@ extension UIViewController {
                     _class["P_CLASS"] = P_CLASS
                     _class["MEETING_TITLE"] = MEETING_TITLE
                     _class["GUEST"] = GUEST
-                    _class["C_DATE_END"] = C_DATE_END
+                    _class["C_DATE_START"] = C_DATE_START
                     _class["CE_ID"] = CE_ID
                     _class["STATUS"] = "\(STATUS)"
                     allRequest.append(_class)
