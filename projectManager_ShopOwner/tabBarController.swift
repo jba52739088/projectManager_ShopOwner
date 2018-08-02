@@ -35,6 +35,10 @@ class tabBarController: UITabBarController{
             appDelegate.calendarVC?.searchEnd = ""
             appDelegate.calendarVC?.searchBegin = ""
             appDelegate.calendarVC?.searchKey = ""
+            appDelegate.calendarVC?.search_b_mid = ""
+            appDelegate.calendarVC?.selectedYear = ""
+            appDelegate.calendarVC?.selectedMonth = ""
+            appDelegate.calendarVC?.selectedDay = ""
             appDelegate.calendarVC?.searchShopName = nil
             appDelegate.calendarVC?.setUpDate()
         }

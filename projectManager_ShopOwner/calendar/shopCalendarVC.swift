@@ -53,9 +53,17 @@ extension shopCalendarVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.popToRootViewController(animated: true)
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let result = formatter.string(from: date).components(separatedBy: "-")
         
+        self.calendarVC?.selectedYear = result[0]
+        self.calendarVC?.selectedMonth = result[1]
+        self.calendarVC?.selectedDay = result[2]
         self.calendarVC?.searchShopName = self.matchedMembers[indexPath.row]
         self.calendarVC?.isSearchShop = true
         self.calendarVC?.queryEvents()
+        
     }
 }

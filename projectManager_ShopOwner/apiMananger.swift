@@ -140,6 +140,40 @@ extension UIViewController {
         }
     }
     
+    func searchCalendarRequest(keyword: String, b_mid: String, from: String, end: String, _ completionHandler: @escaping ([eventModel]?) -> Void) {
+        var allEvents: [eventModel] = []
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/SearchCalendar/"
+        let headers = ["Authorization": "Bearer \(token)"]
+        let parameters = ["keyword":keyword, "b_mid":b_mid, "start_date":from, "end_date":end] as [String : Any]
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            .responseJSON { response in
+                if let results = response.result.value as? [Dictionary<String,AnyObject>] {
+                    for result in results {
+                        let aEvent = eventModel(CE_ID: result["CE_ID"] as? String ?? "",
+                                                M_ID: result["M_ID"] as? String ?? "",
+                                                P_ID: result["P_ID"] as? String ?? "",
+                                                OWNER_ID: result["OWNER_ID"] as? String ?? "",
+                                                GUEST: result["GUEST"] as? String ?? "",
+                                                P_NAME: result["P_NAME"] as? String ?? "",
+                                                P_CLASS: result["P_CLASS"] as? String ?? "",
+                                                C_DATE_START: result["C_DATE_START"] as? String ?? "",
+                                                C_DATE_END: result["C_DATE_END"] as? String ?? "",
+                                                MEETING_TYPE: result["MEETING_TYPE"] as? String ?? "",
+                                                MEETING_TITLE: result["MEETING_TITLE"] as? String ?? "",
+                                                MEETING_PLACE: result["MEETING_PLACE"] as? String ?? "",
+                                                MEETING_INFO: result["MEETING_INFO"] as? String ?? "",
+                                                STATUS: result["STATUS"] as? Int ?? 0,
+                                                SIDE: result["SIDE"] as? String ?? "")
+                        allEvents.append(aEvent)
+                    }
+                    completionHandler(allEvents)
+                }else {
+                    print("searchCalendarRequest: get JSON error")
+                }
+        }
+    }
+    
     // 刪除行事曆
     func deleteCalendarRequest(ceid: String, _ completionHandler: @escaping (Bool, String) -> Void) {
         var allEvents: [eventModel] = []
@@ -161,6 +195,30 @@ extension UIViewController {
                 }else {
                     print("deleteCalendarRequest: get JSON error")
                 }
+        }
+    }
+    
+    // 取得專案bookinglistlist
+    func bookinglistlistRequest(m_id: String, year: String, month: String, day: String, _ completionHandler: @escaping ([String]?) -> Void) {
+        var list: [String] = []
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/GetFreeTime/\(m_id)/\(year)-\(month)-\(day)"
+        let headers = ["Authorization": "Bearer \(token)"]
+        Alamofire.request(url, headers: headers).responseJSON { (response) -> Void in
+            if let results = response.result.value as? [Dictionary<String,AnyObject>] {
+                for result in results {
+                    guard let SH = result["start_hour"] as? Int,          
+                        let EH = result["end_hour"] as? Int,
+                        let SM = result["start_min"] as? Int,
+                        let EM = result["end_min"] as? Int
+                        else { return }
+                    let time = String(format: "%02d%02d-%02d%02d", SH, SM, EH, EM)
+                    list.append(time)
+                }
+                completionHandler(list)
+            }else {
+                print("projectClassRequest: get JSON error")
+            }
         }
     }
     

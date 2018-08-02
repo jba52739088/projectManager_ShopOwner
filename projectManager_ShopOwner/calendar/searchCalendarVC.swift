@@ -21,10 +21,11 @@ class searchCalendarVC: UIViewController {
     
     var calendarVC: calendarVC?
     let timePicker = UIDatePicker()
-    var keyword: String?
+    var keyword: String = ""
     var searchBegin: String?
     var searchEnd: String?
     var matchedMembers: [MatchedMember] = []
+    var b_mid: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,15 +54,32 @@ class searchCalendarVC: UIViewController {
     }
 
     @IBAction func doSearch(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
-        self.calendarVC?.calendarRequest(from: searchBegin!, end: searchEnd!) { (_events) in
-            guard let events = _events else { return }
-            self.calendarVC?.currentEvents = events
-            self.calendarVC?.sortEvents()
-            self.calendarVC?.isSearch = true
-            self.calendarVC?.searchEnd = self.searchEnd!
-            self.calendarVC?.searchBegin = self.searchBegin!
-            self.calendarVC?.searchKey = ""
+        if let _keyword = self.keyWordTextField.text {
+            self.keyword = _keyword
+        }
+        if self.keyword != "" || self.b_mid != "" {
+            self.navigationController?.popToRootViewController(animated: true)
+            self.calendarVC?.searchCalendarRequest(keyword: self.keyword, b_mid: self.b_mid, from: searchBegin!, end: searchEnd!, { (_events) in
+                guard let events = _events else { return }
+                self.calendarVC?.currentEvents = events
+                self.calendarVC?.sortEvents()
+                self.calendarVC?.isSearch = true
+                self.calendarVC?.searchEnd = self.searchEnd!
+                self.calendarVC?.searchBegin = self.searchBegin!
+                self.calendarVC?.searchKey = self.keyword
+                self.calendarVC?.search_b_mid = self.b_mid
+            })
+        }else {
+            self.navigationController?.popToRootViewController(animated: true)
+            self.calendarVC?.calendarRequest(from: searchBegin!, end: searchEnd!) { (_events) in
+                guard let events = _events else { return }
+                self.calendarVC?.currentEvents = events
+                self.calendarVC?.sortEvents()
+                self.calendarVC?.isSearch = true
+                self.calendarVC?.searchEnd = self.searchEnd!
+                self.calendarVC?.searchBegin = self.searchBegin!
+                self.calendarVC?.searchKey = ""
+            }
         }
     }
     
@@ -126,20 +144,12 @@ class searchCalendarVC: UIViewController {
         for member in self.matchedMembers {
             alert.addAction(UIAlertAction(title: member.M_NAME, style: .default, handler: { (_) in
                 self.searchCustomLabel.text = member.M_NAME
-//                self.event.M_ID = member.M_SN
-//                self.event.GUEST = member.M_NAME
-//                UIView.performWithoutAnimation {
-//                    self.tableView.reloadData()
-//                }
+                self.b_mid = member.M_SN
             }))
         }
         alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (_) in
             self.searchCustomLabel.text = "所有"
-//            self.event.M_ID = "-1"
-//            self.event.GUEST = ""
-//            UIView.performWithoutAnimation {
-//                self.tableView.reloadData()
-//            }
+            self.b_mid = ""
         }))
         self.presentAlert(alert, animated: true)
     }
