@@ -29,6 +29,7 @@ class eventModel: NSObject {
     var startTime: String = ""
     var endTime: String = ""
     var timestamp: String = ""
+    var NOTICE: String = "0"
 
     
 //    CE_ID: String,
@@ -49,7 +50,7 @@ class eventModel: NSObject {
     
     
     
-    init(CE_ID: String, M_ID: String, P_ID: String, OWNER_ID: String, GUEST: String, P_NAME: String, P_CLASS: String, C_DATE_START: String, C_DATE_END: String, MEETING_TYPE: String, MEETING_TITLE: String, MEETING_PLACE: String, MEETING_INFO: String, STATUS: Int, SIDE: String) {
+    init(CE_ID: String, M_ID: String, P_ID: String, OWNER_ID: String, GUEST: String, P_NAME: String, P_CLASS: String, C_DATE_START: String, C_DATE_END: String, MEETING_TYPE: String, MEETING_TITLE: String, MEETING_PLACE: String, MEETING_INFO: String, STATUS: Int, SIDE: String, NOTICE: String) {
         self.CE_ID = CE_ID
         self.M_ID = M_ID
         self.P_ID = P_ID
@@ -65,6 +66,7 @@ class eventModel: NSObject {
         self.MEETING_INFO = MEETING_INFO
         self.STATUS = STATUS
         self.SIDE = SIDE
+        self.NOTICE = NOTICE
         
         self.startDate = C_DATE_START.components(separatedBy: "T")[0]
         self.endDate = C_DATE_END.components(separatedBy: "T")[0]

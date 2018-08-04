@@ -95,7 +95,8 @@ extension UIViewController {
                                             MEETING_PLACE: result["MEETING_PLACE"] as? String ?? "",
                                             MEETING_INFO: result["MEETING_INFO"] as? String ?? "",
                                             STATUS: result["STATUS"] as? Int ?? 0,
-                                            SIDE: result["SIDE"] as? String ?? "")
+                                            SIDE: result["SIDE"] as? String ?? "",
+                                            NOTICE: result["NOTICE"] as? String ?? "0")
                     allEvents.append(aEvent)
                 }
                 completionHandler(allEvents)
@@ -130,7 +131,8 @@ extension UIViewController {
                                                 MEETING_PLACE: result["MEETING_PLACE"] as? String ?? "",
                                                 MEETING_INFO: result["MEETING_INFO"] as? String ?? "",
                                                 STATUS: result["STATUS"] as? Int ?? 0,
-                                                SIDE: result["SIDE"] as? String ?? "")
+                                                SIDE: result["SIDE"] as? String ?? "",
+                                                NOTICE: result["NOTICE"] as? String ?? "0")
                         allEvents.append(aEvent)
                     }
                     completionHandler(allEvents)
@@ -164,7 +166,8 @@ extension UIViewController {
                                                 MEETING_PLACE: result["MEETING_PLACE"] as? String ?? "",
                                                 MEETING_INFO: result["MEETING_INFO"] as? String ?? "",
                                                 STATUS: result["STATUS"] as? Int ?? 0,
-                                                SIDE: result["SIDE"] as? String ?? "")
+                                                SIDE: result["SIDE"] as? String ?? "",
+                                                NOTICE: result["NOTICE"] as? String ?? "0")
                         allEvents.append(aEvent)
                     }
                     completionHandler(allEvents)
@@ -342,7 +345,7 @@ extension UIViewController {
         let end_minute = event.endTime.components(separatedBy: ":")[1]
         let C_DATE_START = event.C_DATE_START.components(separatedBy: "T")[0]
         let C_DATE_END = event.C_DATE_END.components(separatedBy: "T")[0]
-        let parameters = ["m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":start_hour, "start_minute":start_minute, "C_DATE_END":C_DATE_END, "end_hour":end_hour, "end_minute":end_minute, "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE, "meeting_info":event.MEETING_INFO] as [String : Any]
+        let parameters = ["m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":start_hour, "start_minute":start_minute, "C_DATE_END":C_DATE_END, "end_hour":end_hour, "end_minute":end_minute, "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE, "meeting_info":event.MEETING_INFO, "notice":event.NOTICE] as [String : Any]
         
         Alamofire.request("http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/InsertCalendar", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
@@ -371,7 +374,7 @@ extension UIViewController {
         let end_minute = event.endTime.components(separatedBy: ":")[1]
         let C_DATE_START = event.C_DATE_START.components(separatedBy: "T")[0]
         let C_DATE_END = event.C_DATE_END.components(separatedBy: "T")[0]
-        let parameters = ["m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":start_hour, "start_minute":start_minute, "C_DATE_END":C_DATE_END, "end_hour":end_hour, "end_minute":end_minute, "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE] as [String : Any]
+        let parameters = ["ce_id":event.CE_ID, "m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":start_hour, "start_minute":start_minute, "C_DATE_END":C_DATE_END, "end_hour":end_hour, "end_minute":end_minute, "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE, "meeting_info":event.MEETING_INFO, "notice":event.NOTICE] as [String : Any]
         
         Alamofire.request("http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/UpdateCalendar/", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
