@@ -28,14 +28,14 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOu-iB-ZnZ">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="80.5"/>
-                                        <state key="normal" image="u224"/>
+                                        <state key="normal" image="2-26訊息icon"/>
                                         <connections>
                                             <action selector="tapMessageBtn:" destination="DbB-Lj-wMY" eventType="touchUpInside" id="wK1-aJ-iRj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4G-iQ-7Zc">
                                         <rect key="frame" x="115" y="0.0" width="107.5" height="80.5"/>
-                                        <state key="normal" image="u439"/>
+                                        <state key="normal" image="2-27商家掃描icon"/>
                                         <connections>
                                             <action selector="tapScanBtn:" destination="DbB-Lj-wMY" eventType="touchUpInside" id="I3C-x2-Fqy"/>
                                             <segue destination="suQ-Lc-5Pg" kind="push" id="X2g-MN-Znl"/>
@@ -43,7 +43,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-Zi-xBn">
                                         <rect key="frame" x="230.5" y="0.0" width="107" height="80.5"/>
-                                        <state key="normal" image="u897"/>
+                                        <state key="normal" image="2-28儲值icon"/>
                                         <connections>
                                             <action selector="tapTopupBtn:" destination="DbB-Lj-wMY" eventType="touchUpInside" id="Sln-Bf-owE"/>
                                         </connections>
@@ -82,7 +82,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-Mc-nw5">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="80"/>
-                                        <state key="normal" image="u1185"/>
+                                        <state key="normal" image="2-29遺囑管理icon"/>
                                         <connections>
                                             <action selector="tapWillBtn:" destination="DbB-Lj-wMY" eventType="touchUpInside" id="EmU-8V-nuw"/>
                                         </connections>
@@ -336,7 +336,7 @@
             </objects>
             <point key="canvasLocation" x="4722" y="1700"/>
         </scene>
-        <!--張律師事務所-->
+        <!--CodeVC-->
         <scene sceneID="fK1-VO-lgU">
             <objects>
                 <viewController storyboardIdentifier="QRCodeVC" id="Yb4-cW-YUd" customClass="QRCodeVC" customModule="projectManager_ShopOwner" customModuleProvider="target" sceneMemberID="viewController">
@@ -367,7 +367,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UzC-gB-Q4J"/>
                     </view>
-                    <navigationItem key="navigationItem" title="張律師事務所" id="ESQ-QB-u3Q"/>
+                    <navigationItem key="navigationItem" id="ESQ-QB-u3Q"/>
                     <connections>
                         <outlet property="imgView" destination="iqq-qn-Sl6" id="riX-Y6-9TY"/>
                     </connections>
@@ -975,7 +975,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Pc-f6-L4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3929" y="1700"/>
+            <point key="canvasLocation" x="3929" y="2400"/>
         </scene>
         <!--訊息中心-->
         <scene sceneID="LAp-Jm-IKi">
@@ -2308,13 +2308,13 @@
                                         <rect key="frame" x="0.0" y="125" width="355" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結束日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7n-O6-9Ac">
-                                                <rect key="frame" x="0.0" y="6" width="69.5" height="52"/>
+                                                <rect key="frame" x="0.0" y="5.5" width="69.5" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年1月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-Ra-jlj">
-                                                <rect key="frame" x="239.5" y="6" width="115.5" height="52"/>
+                                                <rect key="frame" x="239.5" y="5.5" width="115.5" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.81407335069999998" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2669,9 +2669,5 @@
         <image name="p-04_註冊(底圖)" width="1080" height="1920"/>
         <image name="p-07_行事曆時間軸呈現區(底圖)" width="1080" height="1920"/>
         <image name="p-08_新增行事曆底圖" width="1080" height="1920"/>
-        <image name="u1185" width="62" height="51"/>
-        <image name="u224" width="77" height="74"/>
-        <image name="u439" width="65" height="58"/>
-        <image name="u897" width="61" height="53"/>
     </resources>
 </document>

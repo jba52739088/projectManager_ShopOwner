@@ -21,7 +21,7 @@ class bookListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.view.backgroundColor = UIColor.x
+        
         self.displayView.layer.borderColor = UIColor.black.cgColor
         self.displayView.layer.borderWidth = 1
         self.titleLabel.adjustsFontSizeToFitWidth = true
@@ -33,6 +33,7 @@ class bookListVC: UIViewController {
         
         
         self.tableView.tableFooterView = UIView()
+        self.tableView.separatorColor = UIColor.clear
     }
     
     @IBAction func doDismiss(_ sender: Any) {
@@ -55,7 +56,6 @@ extension bookListVC: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.adjustsFontSizeToFitWidth = true
         cell.textLabel?.minimumScaleFactor = 0.2
         cell.selectionStyle = .none
-//        cell.sepa
         return cell
     }
     

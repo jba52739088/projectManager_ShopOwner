@@ -17,6 +17,9 @@ class QRCodeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.getSelfInfoRequest { (selfName) in
+            self.title = selfName
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

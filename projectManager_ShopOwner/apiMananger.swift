@@ -58,6 +58,21 @@ extension UIViewController {
         }
     }
     
+    // 取得自己會員資料
+    func getSelfInfoRequest(_ completionHandler: @escaping (String?) -> Void) {
+        guard let token = appDelegate.token else { return }
+        let url = "http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/GetMember/"
+        let headers = ["Authorization": "Bearer \(token)"]
+        Alamofire.request(url, headers: headers).responseJSON { (response) -> Void in
+            if let results = response.result.value as? Dictionary<String,AnyObject> {
+                let selfName = results["M_NAME"] as? String ?? ""
+                completionHandler(selfName)
+            }else {
+                print("getIDbyTokenRequest: get JSON error")
+            }
+        }
+    }
+    
     // 取得收件夾的括號數量
     func getInboxNumRequest(_ completionHandler: @escaping (Int?) -> Void) {
         guard let token = appDelegate.token else { return }

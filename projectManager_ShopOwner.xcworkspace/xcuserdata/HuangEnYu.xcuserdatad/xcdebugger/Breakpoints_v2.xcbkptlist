@@ -55,60 +55,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-            timestampString = "555053390.178791"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "doConfirm(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;&gt;) -&gt; () in projectManager_ShopOwner.scheduleAddVC.doConfirm(Any) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-                  timestampString = "555053390.378894"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "416">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;&gt;) -&gt; () in projectManager_ShopOwner.scheduleAddVC.doConfirm(Any) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-                  timestampString = "555053390.381233"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "712">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.179186"
+            timestampString = "555140674.445159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "472"
+            endingLineNumber = "472"
             landmarkName = "getInboxDoneRequest(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -119,60 +71,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-            timestampString = "555053390.179525"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "doConfirm(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "projectManager_ShopOwner.scheduleAddVC.doConfirm(Any) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-                  timestampString = "555053390.392094"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;&gt;) -&gt; () in projectManager_ShopOwner.scheduleAddVC.doConfirm(Any) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-                  timestampString = "555053390.3944499"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.179785"
+            timestampString = "555140674.445363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
             landmarkName = "insertCalendarRequest(event:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -184,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.180045"
+            timestampString = "555140674.445426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
             landmarkName = "modifyCalendarRequest(event:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -232,7 +136,7 @@
                   moduleName = "projectManager_ShopOwner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/messageVC/scheduleEditVC.swift"
-                  timestampString = "555053390.410792"
+                  timestampString = "555117209.283798"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -247,7 +151,7 @@
                   moduleName = "projectManager_ShopOwner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/messageVC/scheduleEditVC.swift"
-                  timestampString = "555053390.412766"
+                  timestampString = "555117209.285748"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -264,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.180402"
+            timestampString = "555140674.44554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
             landmarkName = "modifyCalendarRequest(event:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -296,7 +200,7 @@
                   moduleName = "projectManager_ShopOwner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/searchCalendarVC.swift"
-                  timestampString = "555053390.4214129"
+                  timestampString = "555117209.294246"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -311,7 +215,7 @@
                   moduleName = "projectManager_ShopOwner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/searchCalendarVC.swift"
-                  timestampString = "555053390.4237339"
+                  timestampString = "555117209.296201"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
@@ -328,91 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.1806819"
+            timestampString = "555140674.445623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "bookinglistlistRequest(m_id:year:month:day:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "projectManager_ShopOwner/calendar/calendarVC.swift"
-            timestampString = "555053390.180944"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "tapAddBtn(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "projectManager_ShopOwner.calendarVC.tapAddBtn(Any) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/calendarVC.swift"
-                  timestampString = "555053390.428279"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;) -&gt; () in projectManager_ShopOwner.calendarVC.tapAddBtn(Any) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/calendarVC.swift"
-                  timestampString = "555053390.430241"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "142"
-                  endingLineNumber = "142"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.181004"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "bookinglistlistRequest(m_id:year:month:day:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.181244"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "bookinglistlistRequest(m_id:year:month:day:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -424,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.181486"
+            timestampString = "555140674.445725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "bookinglistlistRequest(m_id:year:month:day:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -439,46 +263,30 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-            timestampString = "555053390.181725"
+            filePath = "projectManager_ShopOwner/apiMananger.swift"
+            timestampString = "555140674.4457771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "doConfirm(_:)"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "bookinglistlistRequest(m_id:year:month:day:_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;&gt;) -&gt; () in projectManager_ShopOwner.scheduleAddVC.doConfirm(Any) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-                  timestampString = "555053390.438394"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;&gt;) -&gt; () in projectManager_ShopOwner.scheduleAddVC.doConfirm(Any) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/calendar/scheduleAddVC.swift"
-                  timestampString = "555053390.440706"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projectManager_ShopOwner/apiMananger.swift"
+            timestampString = "555140674.445825"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "bookinglistlistRequest(m_id:year:month:day:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -488,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.1819659"
+            timestampString = "555140674.445908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "searchCalendarRequest(keyword:b_mid:from:end:_:)"
             landmarkType = "7">
             <Locations>
@@ -504,11 +312,11 @@
                   moduleName = "projectManager_ShopOwner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/apiMananger.swift"
-                  timestampString = "555053390.445933"
+                  timestampString = "555117209.319979"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
                   offsetFromSymbolStart = "628">
                </Location>
                <Location
@@ -519,78 +327,14 @@
                   moduleName = "projectManager_ShopOwner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/apiMananger.swift"
-                  timestampString = "555053390.448259"
+                  timestampString = "555117209.321995"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
                   offsetFromSymbolStart = "12">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.182197"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "calendarRequest(from:end:_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in (extension in projectManager_ShopOwner):__ObjC.UIViewController.calendarRequest(from: Swift.String, end: Swift.String, (Swift.Optional&lt;Swift.Array&lt;projectManager_ShopOwner.eventModel&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/apiMananger.swift"
-                  timestampString = "555053390.452963"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "628">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in (extension in projectManager_ShopOwner):__ObjC.UIViewController.calendarRequest(from: Swift.String, end: Swift.String, (Swift.Optional&lt;Swift.Array&lt;projectManager_ShopOwner.eventModel&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "projectManager_ShopOwner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/apiMananger.swift"
-                  timestampString = "555053390.454888"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.182422"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "calendarRequest(from:end:_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -616,13 +360,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectManager_ShopOwner/apiMananger.swift"
-            timestampString = "555053390.182698"
+            timestampString = "555140674.445989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "379"
-            endingLineNumber = "379"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
             landmarkName = "modifyCalendarRequest(event:_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projectManager_ShopOwner/apiMananger.swift"
+            timestampString = "555140674.446041"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "getSelfInfoRequest(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projectManager_ShopOwner/customList/QRCodeVC.swift"
+            timestampString = "555140674.446117"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectManager_ShopOwner.QRCodeVC.viewDidLoad() -&gt; ()"
+                  moduleName = "projectManager_ShopOwner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/customList/QRCodeVC.swift"
+                  timestampString = "555117209.3378119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Int&gt;) -&gt; () in projectManager_ShopOwner.QRCodeVC.viewDidLoad() -&gt; ()"
+                  moduleName = "projectManager_ShopOwner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/HuangEnYu/Documents/IOS_Project/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/projectManager_ShopOwner/projectManager_ShopOwner/customList/QRCodeVC.swift"
+                  timestampString = "555117209.340037"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

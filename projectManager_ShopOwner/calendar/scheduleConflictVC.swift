@@ -49,9 +49,12 @@ extension scheduleConflictVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let aConflict = self.conflictArray[indexPath.row]
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = aConflict["GUEST"]! + " " + aConflict["C_DATE_START"]! + " " + aConflict["MEETING_TITLE"]!
+        cell.textLabel?.numberOfLines = 4
+//        cell.textLabel?.text = aConflict["GUEST"]! + " " + aConflict["C_DATE_START"]! + " " + aConflict["MEETING_TITLE"]!
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 12)
+        cell.textLabel?.text = aConflict["C_DATE_START"]! + " - " + aConflict["C_DATE_END"]! + "\n" + aConflict["GUEST"]! + " - " + aConflict["MEETING_TITLE"]!
         cell.textLabel?.adjustsFontSizeToFitWidth = true
-        cell.textLabel?.minimumScaleFactor = 0.2
+        cell.textLabel?.minimumScaleFactor = 0.1
         cell.selectionStyle = .none
         return cell
     }
