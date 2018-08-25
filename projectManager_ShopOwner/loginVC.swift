@@ -29,8 +29,8 @@ class loginVC: UIViewController {
         registerBtn.layer.masksToBounds = true
         
 //        self.accTextField.text = "systemadmin"
-//        self.accTextField.text = "shopb"
-//        self.pwdTextField.text = "123"
+        self.accTextField.text = "shopb"
+        self.pwdTextField.text = "123"
         
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             self.versionLabel.text = "商家端 - v\(version)"

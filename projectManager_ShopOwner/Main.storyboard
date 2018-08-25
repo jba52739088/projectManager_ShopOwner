@@ -1914,12 +1914,19 @@
                     </view>
                     <navigationItem key="navigationItem" title="1月" id="hIv-Sd-uO9">
                         <barButtonItem key="backBarButtonItem" title="返回" id="G73-XQ-qht"/>
-                        <barButtonItem key="leftBarButtonItem" title="收件匣( )" id="Zoh-5g-aMv">
-                            <color key="tintColor" red="0.81568627449999997" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="tapMessageBtn:" destination="9ZA-9d-bFp" id="8gZ-NQ-BcK"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="收件匣( )" id="Zoh-5g-aMv">
+                                <color key="tintColor" red="0.81568627449999997" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="tapMessageBtn:" destination="9ZA-9d-bFp" id="8gZ-NQ-BcK"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="last" style="plain" id="YKc-ab-5Z9">
+                                <connections>
+                                    <action selector="tapLastBtn:" destination="9ZA-9d-bFp" id="y21-rB-Emw"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem image="2-13新增行事曆icon" style="plain" id="gMh-zS-IY8">
                                 <connections>
@@ -1936,12 +1943,15 @@
                                     <action selector="tapSearchBtn:" destination="9ZA-9d-bFp" id="1Tc-hn-yFj"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem image="next" style="plain" id="kK2-kP-xAz"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="addBtn" destination="gMh-zS-IY8" id="sZK-bF-xiz"/>
                         <outlet property="collectionView" destination="CPW-ew-YqS" id="ofk-St-REa"/>
+                        <outlet property="lastBtn" destination="YKc-ab-5Z9" id="OjW-hQ-v3C"/>
                         <outlet property="messageBtn" destination="Zoh-5g-aMv" id="uRE-89-cZa"/>
+                        <outlet property="nextBtn" destination="kK2-kP-xAz" id="zzR-rm-9HW"/>
                         <outlet property="searchBtn" destination="dqc-mP-rLl" id="eAO-qu-4gO"/>
                         <outlet property="searchTimeBtn" destination="6ms-QN-GOH" id="Rt2-Ue-6yd"/>
                         <outlet property="tableView" destination="BAM-Nf-5A1" id="nhq-G3-QbF"/>
@@ -2308,13 +2318,13 @@
                                         <rect key="frame" x="0.0" y="125" width="355" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結束日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7n-O6-9Ac">
-                                                <rect key="frame" x="0.0" y="6" width="69.5" height="52"/>
+                                                <rect key="frame" x="0.0" y="5.5" width="69.5" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年1月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-Ra-jlj">
-                                                <rect key="frame" x="239.5" y="6" width="115.5" height="52"/>
+                                                <rect key="frame" x="239.5" y="5.5" width="115.5" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.81407335069999998" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2664,6 +2674,8 @@
         <image name="2-27商家掃描icon" width="512" height="512"/>
         <image name="2-28儲值icon" width="512" height="512"/>
         <image name="2-29遺囑管理icon" width="512" height="512"/>
+        <image name="last" width="25" height="25"/>
+        <image name="next" width="25" height="25"/>
         <image name="p-02_登入區(底圖)" width="1080" height="1920"/>
         <image name="p-03_登入區(LOGO)" width="500" height="583"/>
         <image name="p-04_註冊(底圖)" width="1080" height="1920"/>
