@@ -40,7 +40,7 @@ extension UIViewController {
     
     // 註冊
     func registerRequest(account: String, password: String, name: String, ID: String, address: String, phone: String, cellphone: String, mail: String, _ completionHandler: @escaping (Bool, String) -> Void){
-        let parameters = ["M_SN":ID, "M_ACCOUNT":account, "M_PASSWORD":password, "M_NAME":name, "M_TYPE":"C", "M_GENDER":"M", "M_ADDRESS":address, "M_TEL_D":phone, "M_MAIL":mail] as [String : Any]
+        let parameters = ["M_ROCID":ID, "M_ACCOUNT":account, "M_PASSWORD":password, "M_NAME":name, "M_TYPE":"C", "M_GENDER":"M", "M_ADDRESS":address, "M_TEL_D":phone, "M_MAIL":mail] as [String : Any]
         Alamofire.request("http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/AddCustomer", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
                 if let JSON = response.result.value as? [String:AnyObject] {

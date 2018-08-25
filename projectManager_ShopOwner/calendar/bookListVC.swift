@@ -46,13 +46,23 @@ class bookListVC: UIViewController {
 extension bookListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookingList.count
+        if bookingList.count == 0 {
+            return 1
+        }else {
+            return bookingList.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let aTime = self.bookingList[indexPath.row]
+        
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = aTime
+        if bookingList.count == 0 {
+            cell.textLabel?.text = "無可預約的時間"
+        }else {
+            let aTime = self.bookingList[indexPath.row]
+            cell.textLabel?.text = aTime
+        }
         cell.textLabel?.adjustsFontSizeToFitWidth = true
         cell.textLabel?.minimumScaleFactor = 0.2
         cell.selectionStyle = .none
