@@ -148,7 +148,7 @@ class searchCalendarVC: UIViewController {
             }))
         }
         alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (_) in
-            self.searchCustomLabel.text = "所有"
+            self.searchCustomLabel.text = ""
             self.b_mid = ""
         }))
         self.presentAlert(alert, animated: true)

@@ -60,7 +60,9 @@ extension bookListVC: UITableViewDelegate, UITableViewDataSource {
         if bookingList.count == 0 {
             cell.textLabel?.text = "無可預約的時間"
         }else {
-            let aTime = self.bookingList[indexPath.row]
+            var aTime = self.bookingList[indexPath.row]
+            aTime.insert(":", at: aTime.index(aTime.startIndex, offsetBy: 2))
+            aTime.insert(":", at: aTime.index(aTime.startIndex, offsetBy: 8))
             cell.textLabel?.text = aTime
         }
         cell.textLabel?.adjustsFontSizeToFitWidth = true

@@ -358,10 +358,8 @@ extension UIViewController {
         let start_minute = event.startTime.components(separatedBy: ":")[1]
         let end_hour = event.endTime.components(separatedBy: ":")[0]
         let end_minute = event.endTime.components(separatedBy: ":")[1]
-        var C_DATE_START = event.C_DATE_START.components(separatedBy: "T")[0]
-        var C_DATE_END = event.C_DATE_END.components(separatedBy: "T")[0]
-        C_DATE_START = event.C_DATE_START.components(separatedBy: " ")[0]
-        C_DATE_END = event.C_DATE_END.components(separatedBy: " ")[0]
+        let C_DATE_START = event.C_DATE_START.components(separatedBy: "T")[0]
+        let C_DATE_END = event.C_DATE_END.components(separatedBy: "T")[0]
         let parameters = ["m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":"0", "start_minute":"0", "C_DATE_END":C_DATE_END, "end_hour":"0", "end_minute":"0", "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE, "meeting_info":event.MEETING_INFO, "notice":event.NOTICE] as [String : Any]
         
         Alamofire.request("http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/InsertCalendar", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
@@ -389,10 +387,8 @@ extension UIViewController {
         let start_minute = event.startTime.components(separatedBy: ":")[1]
         let end_hour = event.endTime.components(separatedBy: ":")[0]
         let end_minute = event.endTime.components(separatedBy: ":")[1]
-        var C_DATE_START = event.C_DATE_START.components(separatedBy: " ")[0]
-        var C_DATE_END = event.C_DATE_END.components(separatedBy: " ")[0]
-        C_DATE_START = event.C_DATE_START.components(separatedBy: "T")[0]
-        C_DATE_END = event.C_DATE_END.components(separatedBy: "T")[0]
+        let C_DATE_START = event.C_DATE_START.components(separatedBy: " ")[0]
+        let C_DATE_END = event.C_DATE_END.components(separatedBy: " ")[0]
         let parameters = ["ce_id":event.CE_ID, "m_id":event.M_ID, "p_id":event.P_ID, "C_DATE_START":C_DATE_START, "start_hour":start_hour, "start_minute":start_minute, "C_DATE_END":C_DATE_END, "end_hour":end_hour, "end_minute":end_minute, "meeting_title":event.MEETING_TITLE, "meeting_place":event.MEETING_PLACE, "meeting_info":event.MEETING_INFO, "notice":event.NOTICE] as [String : Any]
         
         Alamofire.request("http://edu.iscom.com.tw:2039/API/api/lawyer_WebAPI/UpdateCalendar/", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
